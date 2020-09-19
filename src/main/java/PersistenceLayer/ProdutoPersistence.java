@@ -12,9 +12,9 @@ public class ProdutoPersistence {
     }
 
     public void init() {
-        this.produtoList.add(new ProdutoModel(1, "Camisa", 3));
-        this.produtoList.add(new ProdutoModel(2, "Bermuda", 2));
-        this.produtoList.add(new ProdutoModel(3, "Jaqueta", 1));
+        this.produtoList.add(new ProdutoModel(1, "Camisa", 3,10));
+        this.produtoList.add(new ProdutoModel(2, "Bermuda", 2,10));
+        this.produtoList.add(new ProdutoModel(3, "Jaqueta", 1,10));
     }
 
     public void addProduto(ProdutoModel newProduto){
@@ -23,12 +23,13 @@ public class ProdutoPersistence {
     }
 
     public ProdutoModel getProdutoByID(int id) {
-        if(id == 0) throw new NullPointerException("Argumento nulo.");
+        if(id <= 0) throw new NullPointerException("Argumento nulo.");
         for (ProdutoModel produto : this.produtoList) {
             if(produto.getId() == id){
                 return produto;
             }
         }
+        return null;
     }
 
 }

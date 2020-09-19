@@ -1,38 +1,39 @@
+package DataLayer;
+
+import java.util.List;
+
 public class BoletoModel{
     
-    private int idProduto;
+    private List<ProdutoModel> listaProduto;
     private int idNotaFiscal;
-    private Double valor;
     private String cpf;
 
-    public BoletoModel(int idProduto, int idNotaFiscal, String cpf, Double valor){
-        this.idNotaFiscal = idProduto;
+    public BoletoModel(List<ProdutoModel> listaProduto, int idNotaFiscal, String cpf){
+        this.listaProduto = listaProduto;
         this.idNotaFiscal = idNotaFiscal;
-        this.valor = valor;
         this.cpf = cpf;
     }
 
-    public void setIdProduto(int idProduto){
-        this.idProduto = idProduto;
+    public void setIdProduto(List<ProdutoModel> listaProduto){
+        this.listaProduto = listaProduto;
     }
     public void setIdNotaFiscal(int idNotaFiscal){
         this.idNotaFiscal = idNotaFiscal;
     }
-    public void getValor (String valor){
-        this.valor = valor;
-    }
-    public void getCpf(String cpf){
+    public void setCpf(String cpf){
         this.cpf = cpf;
     }
 
-    public int getIdProduto(){
-        return this.idProduto;
+    public List<ProdutoModel> getIdProduto(){
+        return this.listaProduto;
     }
     public int getIdNotaFiscal(){
         return this.idNotaFiscal;
     }
-    public String getValor(){
-        return this.valor;
+    public float getValor(){
+        float valorFinal = 0;
+        for (ProdutoModel produtoModel: listaProduto) valorFinal += (produtoModel.getValor() * produtoModel.getQuantidade());
+        return valorFinal;
     }
     public String getCpf(){
         return this.cpf;

@@ -3,12 +3,22 @@ package DataLayer;
 public class ProdutoModel {
     private int id;
     private String nome;
+    private float valor;
     private int quantidade;
 
-    public ProdutoModel(int id, String nome, int quantidade) {
+    public ProdutoModel(int id, String nome, int quantidade, float valor) {
         this.id = id;
         this.nome = nome;
         this.quantidade = quantidade;
+        this.valor = valor;
+    }
+
+    public float getValor() {
+        return valor;
+    }
+
+    public void setValor(float valor) {
+        this.valor = valor;
     }
 
     public int getId() {
