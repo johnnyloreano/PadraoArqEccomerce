@@ -22,7 +22,7 @@ public class ClienteController {
     public void cadastraCliente(ClienteModel newCliente){
 
         this.clientePersistence.addCliente(newCliente);
-        
+
     }
 
 }
