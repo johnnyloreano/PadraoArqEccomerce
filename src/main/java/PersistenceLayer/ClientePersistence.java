@@ -21,7 +21,7 @@ public class ClientePersistence {
     public ClienteModel getClienteByCPF(String cpf){
         if(cpf == null) throw new NullPointerException("CPF usado como argumento é nulo");
         for (ClienteModel client : this.clientList){
-            if(client.getCpf().equals(cpf) return client;
+            if(client.getCpf().equals(cpf)) return client;
         }
         return null;
     }
