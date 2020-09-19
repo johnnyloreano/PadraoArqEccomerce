@@ -15,7 +15,7 @@ public class ProdutoView {
     }
 
     public void getProdutoInfo() {
-        System.out.println("Nome do cliente: \t" + this.produtoModel.getNome());
+        System.out.println("Nome do produto: \t" + this.produtoModel.getNome());
         System.out.println("Quantidade: \t" + this.produtoModel.getQuantidade());
     }
 }

@@ -2,14 +2,16 @@ package PersistenceLayer;
 
 import DataLayer.ClienteModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClientePersistence {
 
     private List<ClienteModel> clientList;
 
-    ClientePersistence(List<ClienteModel> list){
-        this.clientList = list;
+    public ClientePersistence(){
+        this.clientList = new ArrayList<ClienteModel>();
+        init();
     }
     public void init(){
         this.clientList.add(new ClienteModel("John", "123", "Brazil"));

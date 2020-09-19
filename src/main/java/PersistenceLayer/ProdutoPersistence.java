@@ -1,14 +1,17 @@
 package PersistenceLayer;
 
+import DataLayer.ClienteModel;
 import DataLayer.ProdutoModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoPersistence {
     private List<ProdutoModel> produtoList;
 
-    ProdutoPersistence(List<ProdutoModel> list ) {
-        this.produtoList = list;
+    public ProdutoPersistence() {
+        this.produtoList = new ArrayList<ProdutoModel>();
+        init();
     }
 
     public void init() {
@@ -31,5 +34,6 @@ public class ProdutoPersistence {
         }
         return null;
     }
+
 
 }
