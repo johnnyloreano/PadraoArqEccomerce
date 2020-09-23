@@ -1,6 +1,7 @@
 package PersistenceLayer;
 
 import DataLayer.ClienteModel;
+import DataLayer.ProdutoModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ public class ClientePersistence {
         this.clientList = new ArrayList<ClienteModel>();
         init();
     }
+
     public void init(){
         this.clientList.add(new ClienteModel("John", "123", "Brazil"));
         this.clientList.add(new ClienteModel("Mary", "855", "Swiss"));
@@ -31,6 +33,12 @@ public class ClientePersistence {
     public void addCliente(ClienteModel newClient){
         if(newClient == null) throw new NullPointerException("Cliente usado como argumento é nulo");
         this.clientList.add(newClient);
+    }
+
+    public void printClientList() {
+        for(ClienteModel p : this.clientList) {
+            System.out.println("Nome: "+ p.getNome() + " | CPF: " + p.getCpf() + " | End: " + p.getEndereco());
+        }
     }
 
 }

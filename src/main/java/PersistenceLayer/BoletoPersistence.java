@@ -14,10 +14,9 @@ public class BoletoPersistence {
     }
 
     public void init() {
-
         List<ProdutoModel> listaProduto = new ArrayList<ProdutoModel>();
         listaProduto.add(new ProdutoModel(1, "Camisa", 3,10));
-        listaProduto.add(new ProdutoModel(3, "Jaqueta", 1,10));
+        listaProduto.add(new ProdutoModel(3, "Jaqueta", 1,20));
 
         this.boletoList.add(new BoletoModel(listaProduto, 1, "123"));
         this.boletoList.add(new BoletoModel(listaProduto, 2, "321"));

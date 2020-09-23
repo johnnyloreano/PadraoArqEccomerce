@@ -15,7 +15,7 @@ public class Carrinho {
     ClienteModel cliente;
     BoletoPersistence boletoPersistence;
 
-    public Carrinho(ClienteModel cliente,BoletoPersistence boletoPersistence){
+    public Carrinho(ClienteModel cliente, BoletoPersistence boletoPersistence){
         this.carrinho = new ArrayList<ProdutoModel>();
         this.cliente = cliente;
         this.boletoPersistence = boletoPersistence;
